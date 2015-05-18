@@ -1,0 +1,166 @@
+/*************************************************
+ * Theme Colors
+ *************************************************/
+
+$article-title: #DA4453;
+$article-lead-text: #434A54;
+$bottom-color: #CCD1D9;
+$text-color: #434A54;
+
+//Priority
+$priority-one  : #FC6E51;
+$priority-two  : #5D9CEC;
+$priority-three: #A0D468;
+$priority-none : #CCD1D9;
+
+
+
+
+/*************************************************
+ * Body Content
+ *************************************************/
+
+
+/*************************************************
+ * User Information
+ *************************************************/
+.user-info{
+  background: none repeat scroll 0 0 #434A54;
+  color: #ffffff;
+  min-height: 8vh;
+}
+
+/*************************************************
+ * Side Navigation
+ *************************************************/
+.side-nav{
+  background: none repeat scroll 0 0 #656D78;
+  color: #ffffff;
+  min-height:92vh;
+  border-right: 1px solid #434A54;
+}
+.side-nav-element{
+  padding:10px 5px;
+  font-size: 1em;
+  i{
+    color: #ffffff;
+  }
+
+  a{
+    color: #ffffff;
+    text-decoration: none;
+  }
+}
+
+
+/*************************************************
+ * Top Navigation
+ *************************************************/
+.top-nav{
+  background: none repeat scroll 0 0 #F5F7FA;
+  color: #ffffff;
+  min-height: 5vh;
+  border-bottom: 1px solid $bottom-color;
+}
+
+/*************************************************
+ * Page Content
+ *************************************************/
+
+.page-content{
+  background: none repeat scroll 0 0 #E6E9ED;
+  color: #ffffff;
+  min-height: 95vh;
+  padding: 0 20px;
+
+  .title{
+    color: $article-title;
+  }
+
+}
+
+.box{
+  padding:20px;
+  background: #ffffff !important;
+  border: 1px solid transparent;
+  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.07), 1px 2px 5px 0px rgba(0, 0, 0, 0.06);
+  margin-bottom: 30px;
+}
+
+input,textarea{
+  border:none;
+  height: 36px;
+  //border-bottom: 1px solid $bottom-color;
+  display: table-cell;
+  font-size: 16px;
+  width: 100%;
+  
+}
+
+textarea{
+  border:none;
+  height:100px;
+  //border-bottom: 1px solid $bottom-color;
+  display: table-cell;
+  font-size: 16px;
+  width: 100%;
+  resize: none;
+}
+
+
+input:focus, textarea:focus{
+  border: none;
+  box-shadow: 0px -2px 0px $article-title inset;
+  outline: none;
+}
+
+li.task-item{
+  height: 20px;
+  background: #F5F7FA;
+  color: $text-color;
+  padding:5px;
+  margin-bottom: 5px;
+  box-shadow: 0px -2px 0px  rgba(0, 0, 0, 0.07) inset;
+}
+
+li.p0{
+  border-left: 5px solid $priority-none;
+}
+
+li.p1{
+    border-left: 5px solid $priority-one;
+}
+
+li.p2{
+  border-left: 5px solid $priority-two;
+}
+
+li.p3{
+  border-left: 5px solid $priority-three;
+}
+
+.task-check{
+  cursor: pointer;
+}
+
+.tasks-box{
+  min-height: 70vh;
+  color: #000;
+}
+
+.action-item{
+  margin-top: 10px;
+  text-align: center;
+  padding:10px 0;
+  cursor: pointer;
+}
+
+.action-item-active{
+  box-shadow: 0px -2px 0px $article-title inset;
+}
+
+.action-placeholder{
+  min-height: 300px;
+  box-shadow: 0px -2px 0px $article-title inset;
+
+}
