@@ -1,207 +1,204 @@
-<head>
-  <meta charset="UTF-8">
-  <title>Home Page</title>
-</head>
-<body>
-<div class="container-fluid">
-  <div class="r">
-    <div class="c c-1-8">
-      {{> sidenav }}
-    </div>
-    <div class="c c-7-8">
-      <div class="r">
-        <div class="c c-1-1">
-          <div class="top-nav">
-            &nbsp;
+<template name="Inbox">
+  <div class="container-fluid">
+    <div class="r">
+      <div class="c c-1-8">
+        {{> sidenav }}
+      </div>
+      <div class="c c-7-8">
+        <div class="r">
+          <div class="c c-1-1">
+            <div class="top-nav">
+              &nbsp;
+            </div>
           </div>
         </div>
-      </div>
-      <div class="r">
-        <div class="c c-1-1">
-          <div class="page-content">
-            <div class="r">
-              <div class="c c-1-1">
-                <h1 class="title"><i class="icon-gauge"></i> My Dashboard</h1>
-              </div>
-            </div>
-            <div class="r">
-              <div class="c c-1-1">
-                <div class="box">
-                  <input type="text" placeholder="Add task.."/>
+        <div class="r">
+          <div class="c c-1-1">
+            <div class="page-content">
+              <div class="r">
+                <div class="c c-1-1">
+                  <h1 class="title"><i class="icon-gauge"></i> My Dashboard</h1>
                 </div>
               </div>
-            </div>
-            <div class="r">
-              <div class="c c-2-3">
-                <div class="tasks-box box">
-                  <ul>
-                    <li class="task-item p0">
-                      <div class="r">
-                        <div class="c c-1-25">
-                          <div class="r">
-                            <div class="c c-1-2">
-                              <i class="task-check icon-check-empty"></i>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="c c-24-25">
-                          <div class="r">
-                            <div class="c c-9-10">
-                              witches are toggle element that switch between an Off and On
-                              state on tap or click.
-                            </div>
-                            <div class="c c-1-10">
-                              Arun
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="task-item p0">
-                      <div class="r">
-                        <div class="c c-1-25">
-                          <div class="r">
-                            <div class="c c-1-2">
-                              <i class="task-check icon-check-empty"></i>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="c c-24-25">
-                          <div class="r">
-                            <div class="c c-9-10">
-                              witches are toggle element that switch between an Off and On
-                              state on tap or click.
-                            </div>
-                            <div class="c c-1-10">
-                              Arun
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="task-item p0">
-                      <div class="r">
-                        <div class="c c-1-25">
-                          <div class="r">
-                            <div class="c c-1-2">
-                              <i class="task-check icon-check-empty"></i>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="c c-24-25">
-                          <div class="r">
-                            <div class="c c-9-10">
-                              witches are toggle element that switch between an Off and On
-                              state on tap or click.
-                            </div>
-                            <div class="c c-1-10">
-                              Arun
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="task-item p0">
-                      <div class="r">
-                        <div class="c c-1-25">
-                          <div class="r">
-                            <div class="c c-1-2">
-                              <i class="task-check icon-check-empty"></i>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="c c-24-25">
-                          <div class="r">
-                            <div class="c c-9-10">
-                              witches are toggle element that switch between an Off and On
-                              state on tap or click.
-                            </div>
-                            <div class="c c-1-10">
-                              Arun
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="task-item p0">
-                      <div class="r">
-                        <div class="c c-1-25">
-                          <div class="r">
-                            <div class="c c-1-2">
-                              <i class="task-check icon-check-empty"></i>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="c c-24-25">
-                          <div class="r">
-                            <div class="c c-9-10">
-                              witches are toggle element that switch between an Off and On
-                              state on tap or click.
-                            </div>
-                            <div class="c c-1-10">
-                              Arun
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
+              <div class="r">
+                <div class="c c-1-1">
+                  <div class="box">
+                    <input type="text" placeholder="Add task.."/>
+                  </div>
                 </div>
               </div>
-              <div class="c c-1-3">
-                <div class="tasks-box box" style="margin-left: 5px; ">
-                  <div class="r">
-                    <div class="c-1-1">
-                      <textarea name="task" id="" cols="30" rows="10">Witches are toggle element that switch between an Off and On state on tap or click.</textarea>
-                    </div>
+              <div class="r">
+                <div class="c c-2-3">
+                  <div class="tasks-box box">
+                    <ul>
+                      <li class="task-item p0" draggable="true">
+                        <div class="r">
+                          <div class="c c-1-25">
+                            <div class="r">
+                              <div class="c c-1-2">
+                                <i class="task-check icon-check-empty"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="c c-24-25">
+                            <div class="r">
+                              <div class="c c-9-10">
+                                witches are toggle element that switch between an Off and On
+                                state on tap or click.
+                              </div>
+                              <div class="c c-1-10">
+                                Arun
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="task-item p0">
+                        <div class="r">
+                          <div class="c c-1-25">
+                            <div class="r">
+                              <div class="c c-1-2">
+                                <i class="task-check icon-check-empty"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="c c-24-25">
+                            <div class="r">
+                              <div class="c c-9-10">
+                                witches are toggle element that switch between an Off and On
+                                state on tap or click.
+                              </div>
+                              <div class="c c-1-10">
+                                Arun
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="task-item p0">
+                        <div class="r">
+                          <div class="c c-1-25">
+                            <div class="r">
+                              <div class="c c-1-2">
+                                <i class="task-check icon-check-empty"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="c c-24-25">
+                            <div class="r">
+                              <div class="c c-9-10">
+                                witches are toggle element that switch between an Off and On
+                                state on tap or click.
+                              </div>
+                              <div class="c c-1-10">
+                                Arun
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="task-item p0">
+                        <div class="r">
+                          <div class="c c-1-25">
+                            <div class="r">
+                              <div class="c c-1-2">
+                                <i class="task-check icon-check-empty"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="c c-24-25">
+                            <div class="r">
+                              <div class="c c-9-10">
+                                witches are toggle element that switch between an Off and On
+                                state on tap or click.
+                              </div>
+                              <div class="c c-1-10">
+                                Arun
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="task-item p0">
+                        <div class="r">
+                          <div class="c c-1-25">
+                            <div class="r">
+                              <div class="c c-1-2">
+                                <i class="task-check icon-check-empty"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="c c-24-25">
+                            <div class="r">
+                              <div class="c c-9-10">
+                                witches are toggle element that switch between an Off and On
+                                state on tap or click.
+                              </div>
+                              <div class="c c-1-10">
+                                Arun
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
                   </div>
-                  <div class="r">
-                    <div class="c c-1-2">
-                      Start
+                </div>
+                <div class="c c-1-3">
+                  <div class="tasks-box box" style="margin-left: 5px; ">
+                    <div class="r">
+                      <div class="c-1-1">
+                        <textarea name="task" id="" cols="30" rows="10">Witches are toggle element that switch between an Off and On state on tap or click.</textarea>
+                      </div>
                     </div>
-                    <div class="c c-1-2">
-                      End
+                    <div class="r">
+                      <div class="c c-1-2">
+                        Start
+                      </div>
+                      <div class="c c-1-2">
+                        End
+                      </div>
                     </div>
-                  </div>
-                  <div class="r">
-                    <div class="c c-1-1">
-                      <input type="text"/>
+                    <div class="r">
+                      <div class="c c-1-1">
+                        <input type="text"/>
 
-                    </div>
-                  </div>
-                  <div class="r" style="margin-top: 10px;">
-                    <div data="notes" class="action-item action-item-active c c-1-5">
-                      <img src="img/draft1.png" alt="" height="24px" width="24px"/>
-                    </div>
-                    <div data="actions" class="action-item c c-1-5">
-                      <img src="img/lists10.png" alt="" height="24px" width="24px"/>
-                    </div>
-                    <div data="references" class="action-item c c-1-5">
-                      <img src="img/google123.png" alt="" height="24px" width="24px"/>
-                    </div>
-                    <div data="repeat" class="action-item c c-1-5">
-                      <img src="img/repeat2.png" alt="" height="24px" width="24px"/>
-                    </div>
-                    <div data="settings" class="action-item c c-1-5">
-                      <img src="img/settings48.png" alt="" height="24px" width="24px"/>
-                    </div>
-                  </div>
-                  <div class="r">
-                    <div class="c c-1-1">
-                      <div id="task-notes" class="action-placeholder">
-                        notes
                       </div>
-                      <div id="task-actions" class="action-placeholder" style="display: none">
-                        actions
+                    </div>
+                    <div class="r" style="margin-top: 10px;">
+                      <div data="notes" class="action-item action-item-active c c-1-5">
+                        <img src="img/draft1.png" alt="" height="24px" width="24px"/>
                       </div>
-                      <div id="task-references" class="action-placeholder" style="display: none">
-                        references
+                      <div data="actions" class="action-item c c-1-5">
+                        <img src="img/lists10.png" alt="" height="24px" width="24px"/>
                       </div>
-                      <div id="task-repeat" class="action-placeholder" style="display: none">
-                        repeat
+                      <div data="references" class="action-item c c-1-5">
+                        <img src="img/google123.png" alt="" height="24px" width="24px"/>
                       </div>
-                      <div id="task-settings" class="action-placeholder" style="display: none">
-                        settings
+                      <div data="repeat" class="action-item c c-1-5">
+                        <img src="img/repeat2.png" alt="" height="24px" width="24px"/>
+                      </div>
+                      <div data="settings" class="action-item c c-1-5">
+                        <img src="img/settings48.png" alt="" height="24px" width="24px"/>
+                      </div>
+                    </div>
+                    <div class="r">
+                      <div class="c c-1-1">
+                        <div id="task-notes" class="action-placeholder">
+                          notes
+                        </div>
+                        <div id="task-actions" class="action-placeholder" style="display: none">
+                          actions
+                        </div>
+                        <div id="task-references" class="action-placeholder" style="display: none">
+                          references
+                        </div>
+                        <div id="task-repeat" class="action-placeholder" style="display: none">
+                          repeat
+                        </div>
+                        <div id="task-settings" class="action-placeholder" style="display: none">
+                          settings
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -213,5 +210,4 @@
       </div>
     </div>
   </div>
-</div>
-</body>
+</template>
