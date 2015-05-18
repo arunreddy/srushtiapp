@@ -19,3 +19,15 @@ $(document).ready(function () {
         $('#task-'+data).show(1000);
     });
 });
+
+
+Template.Inbox.helpers({
+
+        inboxTasks: function(){
+            return InboxList.find();
+        },
+        inboxTask: function(){
+            return InboxList.findOne();
+        }
+    }
+)
