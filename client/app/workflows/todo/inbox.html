@@ -1,10 +1,10 @@
 <template name="Inbox">
   <div class="container-fluid">
     <div class="r">
-      <div class="c c-1-8">
+      <div class="c c-1-16">
 				{{> sidenav }}
       </div>
-      <div class="c c-7-8">
+      <div class="c c-15-16">
         <div class="r">
           <div class="c c-1-1">
             <div class="top-nav">
@@ -25,7 +25,7 @@
                 <div class="c c-2-3">
                   <div class="tasks-box box">
                     <ul>
-											{{#each inboxTasks}}
+						{{#each inboxTasks}}
                         <li class="task-item p0" draggable="true">
                           <div class="r">
                             <div class="c c-1-25">
@@ -38,7 +38,9 @@
                             <div class="c c-24-25">
                               <div class="r">
                                 <div class="c c-9-10">
-																	{{description}}
+                                  <div style="text-overflow: ellipsis;width:100%; overflow: hidden; white-space: nowrap;">
+                                    {{description}}
+                                  </div>
                                 </div>
                                 <div class="c c-1-10">
                                   Arun
@@ -47,7 +49,7 @@
                             </div>
                           </div>
                         </li>
-											{{/each}}
+						{{/each}}
                     </ul>
                   </div>
                 </div>
@@ -55,19 +57,19 @@
                   <div class="tasks-box box" style="margin-left: 5px; ">
                     <div class="r" style="margin-top: 10px;">
                       <div data="details" class="action-item action-item-active c c-1-5">
-                        <img src="img/report1.png" alt="" height="24px" width="24px"/>
+                        <img src="img/report1.svg" alt="" height="24px" width="24px"/>
                       </div>
                       <div data="notes" class="action-item c c-1-5">
-                        <img src="img/wallclock.png" alt="" height="24px" width="24px"/>
+                        <img src="img/wallclock.svg" alt="" height="24px" width="24px"/>
                       </div>
                       <div data="actions" class="action-item c c-1-5">
-                        <img src="img/lists10.png" alt="" height="24px" width="24px"/>
+                        <img src="img/lists10.svg" alt="" height="24px" width="24px"/>
                       </div>
                       <div data="references" class="action-item c c-1-5">
-                        <img src="img/google123.png" alt="" height="24px" width="24px"/>
+                        <img src="img/google123.svg" alt="" height="24px" width="24px"/>
                       </div>
                       <div data="repeat" class="action-item c c-1-5">
-                        <img src="img/repeat2.png" alt="" height="24px" width="24px"/>
+                        <img src="img/repeat2.svg" alt="" height="24px" width="24px"/>
                       </div>
                     </div>
                     <div class="r">
