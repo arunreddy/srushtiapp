@@ -7,6 +7,7 @@ $(document).ready(function () {
     });
 
     $('.action-item').click(function(){
+        console.log('Clicked..');
         obj = $(this);
         obj.parent("div").children().each(function(){
             $(this).removeClass('action-item-active');
