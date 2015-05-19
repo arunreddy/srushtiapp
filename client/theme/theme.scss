@@ -87,7 +87,7 @@ $priority-none : #CCD1D9;
   margin-bottom: 30px;
 }
 
-input,textarea{
+input[type="text"],textarea{
   border:none;
   height: 36px;
   //border-bottom: 1px solid $bottom-color;
@@ -108,7 +108,7 @@ textarea{
 }
 
 
-input:focus, textarea:focus{
+input[type="text"]:focus, textarea:focus{
   border: none;
   box-shadow: 0px -2px 0px $article-title inset;
   outline: none;
@@ -175,7 +175,7 @@ li.p3{
 
 #task-dates{
 
-    input{
+  input[type="text"]{
       width:90%;
     }
     .input{
@@ -192,4 +192,14 @@ li.p3{
       padding-bottom: 20px;
       margin-bottom:40px;
     }
+
+  select{
+    padding:7px;
+  }
+
+  input[type="checkbox"]{
+    width:28px;
+    margin:0;
+    margin-top:16px;
+  }
 }

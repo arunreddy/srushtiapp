@@ -14,7 +14,8 @@
         </div>
         <div class="r">
           <div class="c c-1-1">
-            <div class="page-content"><l></l>
+            <div class="page-content">
+              <l></l>
               <div class="r">
                 <div class="c c-1-1">
                   <h1 class="title"><i class="icon-gauge"></i> My Dashboard</h1>
@@ -54,7 +55,7 @@
                   <div class="tasks-box box" style="margin-left: 5px; ">
                     <div class="r" style="margin-top: 10px;">
                       <div data="details" class="action-item action-item-active c c-1-5">
-                        <img src="img/report1.png" alt="" height="24px" width="24px" />
+                        <img src="img/report1.png" alt="" height="24px" width="24px"/>
                       </div>
                       <div data="notes" class="action-item c c-1-5">
                         <img src="img/wallclock.png" alt="" height="24px" width="24px"/>
@@ -71,7 +72,7 @@
                     </div>
                     <div class="r">
                       <div class="c c-1-1">
-                        <div id="task-details" class="action-placeholder"  style="display: none">
+                        <div id="task-details" class="action-placeholder">
                           <div class="label">
                             Description:
                           </div>
@@ -88,8 +89,8 @@
                               <textarea name="task-notes" id="taskNotes" cols="30" rows="80">{{inboxTask.notes}} </textarea>
                             </div>
                           </div>
-                        </div>
-                        <div id="task-dates" class="action-placeholder">
+                        </div><!-- Task Details -->
+                        <div id="task-dates" class="action-placeholder"  style="display: none">
                           <div class="label">
                             Dates:
                           </div>
@@ -119,29 +120,131 @@
                               </div>
                             </div>
                           </div>
+                          <div class="r">
+                            <div class="c c-1-3">
+                              <div class="form-label">
+                                Completed Date:
+                              </div>
+                            </div>
+                            <div class="c c-2-3">
+                              <div class="input">
+                                <input type="text" id="taskEndDate" name="taskEndDate"/>
+                                <i class="icon-calendar"></i>
+                              </div>
+                            </div>
+                          </div>
                           <div class="label">
                             Repeat:
                           </div>
                           <div class="r">
-                            <div class="c c-1-2">
-                              <select name="taskRepeat" id="taskRepeat">
-                                <option value="">Don't Repeat</option>
-                                <option value="">Daily</option>
-                                <option value="">WeekDay</option>
-                                <option value="">Weekends</option>
-                                <option value="">Weekly</option>
-                                <option value="">Monthly</option>
+                            <div class="c c-1-3">
+                              <div class="form-label">
+                                Repeats:
+                              </div>
+                            </div>
+                            <div class="c c-2-3">
+                              <select id="task-repeat-frequency" title="Repeats Weekly">
+                                <option value="0" title="Daily">Daily</option>
+                                <option value="1" title="Every weekday (Monday to Friday)">Every weekday (Monday to Friday)</option>
+                                <option value="2" title="Every Monday, Wednesday, and Friday">Every Monday, Wednesday, and Friday</option>
+                                <option value="3" title="Every Tuesday and Thursday">Every Tuesday and Thursday</option>
+                                <option value="4" title="Weekly">Weekly</option>
+                                <option value="5" title="Monthly">Monthly</option>
+                                <option value="6" title="Yearly">Yearly</option>
                               </select>
-
                             </div>
                           </div>
-                        </div>
+                          <div class="r">
+                            <div class="c c-1-3">
+                              <div class="form-label">
+                                Repeats Every:
+                              </div>
+                            </div>
+                            <div class="c c-2-3">
+                              <select id="task-repeat-frequency" title="Repeats Weekly">
+                                <option value="0" title="Daily">Daily</option>
+                                <option value="1" title="Every weekday (Monday to Friday)">Every weekday (Monday to Friday)</option>
+                                <option value="2" title="Every Monday, Wednesday, and Friday">Every Monday, Wednesday, and Friday</option>
+                                <option value="3" title="Every Tuesday and Thursday">Every Tuesday and Thursday</option>
+                                <option value="4" title="Weekly">Weekly</option>
+                                <option value="5" title="Monthly">Monthly</option>
+                                <option value="6" title="Yearly">Yearly</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="r">
+                            <div class="c c-1-3">
+                              <div class="form-label">
+                                Repeats On:
+                              </div>
+                            </div>
+                            <div class="c c-2-3">
+                              <input type="checkbox"/>M
+                              <input type="checkbox"/>T
+                              <input type="checkbox"/>W
+                              <input type="checkbox"/>T
+                              <input type="checkbox"/>F
+                              <input type="checkbox"/>S
+                              <input type="checkbox"/>S
+                            </div>
+                          </div>
+                          <div class="r">
+                            <div class="c c-1-3">
+                              <div class="form-label">
+                                Starts on:
+                              </div>
+                            </div>
+                            <div class="c c-2-3">
+                              <div class="input">
+                                <input type="text" id="taskEndDate" name="taskEndDate"/>
+                                <i class="icon-calendar"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="r">
+                            <div class="c c-1-3">
+                              <div class="form-label">
+                                Ends:
+                              </div>
+                            </div>
+                            <div class="c c-2-3">
+                              <div class="input">
+                                <input type="text" id="taskEndDate" name="taskEndDate"/>
+                                <i class="icon-calendar"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="r">
+                            <div class="c c-1-3">
+                              <div class="form-label">
+                                Summary:
+                              </div>
+                            </div>
+                            <div class="c c-2-3">
+                              &nbsp;
+                            </div>
+                          </div>
+                        </div> <!-- Task Dates -->
                         <div id="task-actions" class="action-placeholder" style="display: none">
-                          actions
-                        </div>
+                          <div class="label">
+                            Actions:
+                          </div>
+                          <ul>
+                            <li>
+                              <div class="r">
+                                <div class="c c-1-10">
+                                  <i class="task-check icon-check-empty"></i>
+                                </div>
+                                <div class="c c-9-10">
+                                  <input type="text" value="Action 01"/>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div><!-- Actions -->
                         <div id="task-references" class="action-placeholder" style="display: none">
                           references
-                        </div>
+                        </div><!-- References -->
                         <div id="task-repeat" class="action-placeholder" style="display: none">
                           <div class="r">
                             <div class="c c-1-2">
@@ -196,18 +299,18 @@
         $(this).toggleClass("icon-check");
       });
 
-      $('.action-item').click(function(){
+      $('.action-item').click(function () {
         console.log('Clicked..');
         obj = $(this);
-        obj.parent("div").children().each(function(){
+        obj.parent("div").children().each(function () {
           $(this).removeClass('action-item-active');
           data = $(this).attr('data');
-          $('#task-'+data).hide();
+          $('#task-' + data).hide();
         });
 
         obj.addClass('action-item-active');
         data = obj.attr('data');
-        $('#task-'+data).show(1000);
+        $('#task-' + data).show(1000);
       });
 
       $('#taskStartDate').datetimepicker();
