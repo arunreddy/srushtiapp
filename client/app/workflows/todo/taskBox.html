@@ -1,21 +1,21 @@
 <template name="InboxTask">
   <div class="tasks-box box" style="margin-left: 5px; ">
     <div class="r" style="margin-top: 10px;">
-      <div data="details" class="action-item action-item-active c c-1-5">
+      <button data="details" class="action-item action-item-active c c-1-5">
         <img src="img/report1.svg" alt="" height="24px" width="24px"/>
-      </div>
-      <div data="dates" class="action-item c c-1-5">
+      </button>
+      <button data="dates" class="action-item c c-1-5">
         <img src="img/wallclock.svg" alt="" height="24px" width="24px"/>
-      </div>
-      <div data="actions" class="action-item c c-1-5">
+      </button>
+      <button data="actions" class="action-item c c-1-5">
         <img src="img/lists10.svg" alt="" height="24px" width="24px"/>
-      </div>
-      <div data="references" class="action-item c c-1-5">
+      </button>
+      <button data="references" class="action-item c c-1-5">
         <img src="img/google123.svg" alt="" height="24px" width="24px"/>
-      </div>
-      <div data="repeat" class="action-item c c-1-5">
+      </button>
+      <button data="repeat" class="action-item c c-1-5">
         <img src="img/repeat2.svg" alt="" height="24px" width="24px"/>
-      </div>
+      </button>
     </div>
     <div class="r">
       <div class="c c-1-1">
@@ -176,17 +176,38 @@
           <div class="label">
             Actions:
           </div>
-          <ul>
-            <li>
-              <div class="r">
-                <div class="c c-1-10">
-                  <i class="task-check icon-check-empty"></i>
-                </div>
-                <div class="c c-9-10">
-                  <input type="text" value="Action 01"/>
-                </div>
-              </div>
-            </li>
+          <ul data-id="{{_id}}">
+            {{#each actions}}
+	            <li>
+		            <div class="r">
+			            <div class="c c-1-10">
+				            <div class="sub-task-container">
+					            {{#if completed}}
+						            <i class="sub-task-check icon-check icon-2x"></i>
+                      {{else}}
+						            <i class="sub-task-check icon-check-empty icon-2x"></i>
+                      {{/if}}
+				            </div>
+			            </div>
+			            <div class="c c-9-10">
+				            <input type="text" class="subTaskText" value="{{text}}"/>
+				            <button class="deleteSubTask"><i class="icon-trash"></i></button>
+			            </div>
+		            </div>
+	            </li>
+            {{/each}}
+	          <li class="sub-task-add">
+		          <div class="r">
+			          <div class="c c-1-10">
+				          <div class="sub-task-container">
+					          <i class="sub-task-check icon-plus icon-2x"></i>
+				          </div>
+			          </div>
+			          <div class="c c-9-10">
+				          <input type="text" id="subTaskAdd" name="subTaskAdd" placeholder="Add Action..."/>
+			          </div>
+		          </div>
+	          </li>
           </ul>
         </div><!-- Actions -->
         <div id="task-references" class="action-placeholder" style="display: none">

@@ -26,7 +26,7 @@
                   <div class="tasks-box box">
                     <ul>
 											{{#each inboxTasks}}
-                        <li class="task-item p0" draggable="true">
+                        <li class="task-item  {{#if completed}}task-completed{{/if}} p0" draggable="true">
                           <div class="r">
                             <div class="c c-1-25">
                               <div class="r">
@@ -38,12 +38,13 @@
                             <div class="c c-24-25">
                               <div class="r">
                                 <div class="c c-9-10">
-                                  <div id="{{_id}}" class="taskDescription" style="text-overflow: ellipsis;width:100%; overflow: hidden; white-space: nowrap;">
+                                  <div id="{{_id}}" class="taskDescription">
 																		{{description}}
                                   </div>
                                 </div>
-                                <div class="c c-1-10">
-                                  Arun
+                                <div class="c c-1-10 icons">
+	                                <button class="trashTask"><i class="icon-trash"></i></button>
+	                                <button class="markComplete"><i class="icon-ok-1"></i></button>
                                 </div>
                               </div>
                             </div>
@@ -67,34 +68,9 @@
   </div>
   <script>
     $(document).ready(function () {
-
-      console.log("Page Loaded..");
-
-      $('.task-check').click(function () {
-        $(this).toggleClass("icon-check-empty");
-        $(this).toggleClass("icon-check");
-      });
-
-      $('.action-item').click(function () {
-        console.log('Clicked..');
-        obj = $(this);
-        obj.parent("div").children().each(function () {
-          $(this).removeClass('action-item-active');
-          data = $(this).attr('data');
-          $('#task-' + data).hide();
-        });
-
-        obj.addClass('action-item-active');
-        data = obj.attr('data');
-        $('#task-' + data).show(1000);
-      });
-
       $('.dateField').datetimepicker({
         format:'Y-m-d H:m:00'
       });
-
     });
-
-
   </script>
 </template>
