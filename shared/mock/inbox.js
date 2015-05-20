@@ -212,17 +212,17 @@ var inboxMockTasks =  [{
 
 Meteor.startup(function () {
 
-    //Clear up Inbox List.
-    InboxList.find().forEach(function(inboxTask) {
-        InboxList.remove(inboxTask._id);
-    });
-
-    //Populate Inbox with default list.
-    if(InboxList.find().count() === 0){
-        _.each(inboxMockTasks, function(inboxTask) {
-            InboxList.insert(inboxTask);
-        });
-    }
-
-    console.log(InboxList.findOne());
+    ////Clear up Inbox List.
+    //InboxList.find().forEach(function(inboxTask) {
+    //    InboxList.remove(inboxTask._id);
+    //});
+    //
+    ////Populate Inbox with default list.
+    //if(InboxList.find().count() === 0){
+    //    _.each(inboxMockTasks, function(inboxTask) {
+    //        InboxList.insert(inboxTask);
+    //    });
+    //}
+    //
+    //console.log(InboxList.findOne());
 });

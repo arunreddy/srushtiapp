@@ -1,0 +1,233 @@
+<template name="InboxTask">
+  <div class="tasks-box box" style="margin-left: 5px; ">
+    <div class="r" style="margin-top: 10px;">
+      <div data="details" class="action-item action-item-active c c-1-5">
+        <img src="img/report1.svg" alt="" height="24px" width="24px"/>
+      </div>
+      <div data="dates" class="action-item c c-1-5">
+        <img src="img/wallclock.svg" alt="" height="24px" width="24px"/>
+      </div>
+      <div data="actions" class="action-item c c-1-5">
+        <img src="img/lists10.svg" alt="" height="24px" width="24px"/>
+      </div>
+      <div data="references" class="action-item c c-1-5">
+        <img src="img/google123.svg" alt="" height="24px" width="24px"/>
+      </div>
+      <div data="repeat" class="action-item c c-1-5">
+        <img src="img/repeat2.svg" alt="" height="24px" width="24px"/>
+      </div>
+    </div>
+    <div class="r">
+      <div class="c c-1-1">
+        <div id="task-details" class="action-placeholder">
+          <div class="label">
+            Description:
+          </div>
+          <div class="r">
+            <div class="c c-1-1">
+              <textarea name="description" id="taskDescription" class="editable" cols="30" rows="10">{{description}} </textarea>
+            </div>
+          </div>
+          <div class="label">
+            Notes:
+          </div>
+          <div class="r">
+            <div class="c c-1-1">
+              <textarea name="notes"  id="taskNotes" class="editable" cols="30" rows="80">{{notes}} </textarea>
+            </div>
+          </div>
+        </div><!-- Task Details -->
+        <div id="task-dates" class="action-placeholder"  style="display: none">
+          <div class="label">
+            Dates:
+          </div>
+          <div class="r">
+            <div class="c c-1-3">
+              <div class="form-label">
+                Start Date:
+              </div>
+            </div>
+            <div class="c c-2-3">
+              <div class="input">
+                <input type="text" id="taskStartDate" class="editable dateField" name="startDate" value="{{startDate}}"/>
+                <i class="icon-calendar"></i>
+              </div>
+            </div>
+          </div>
+          <div class="r">
+            <div class="c c-1-3">
+              <div class="form-label">
+                End Date:
+              </div>
+            </div>
+            <div class="c c-2-3">
+              <div class="input">
+                <input type="text" id="taskEndDate" name="endDate" class="editable dateField" value="{{endDate}}"/>
+                <i class="icon-calendar"></i>
+              </div>
+            </div>
+          </div>
+          <div class="r">
+            <div class="c c-1-3">
+              <div class="form-label">
+                Completed Date:
+              </div>
+            </div>
+            <div class="c c-2-3">
+              <div class="input">
+                <input type="text" id="taskCompletedDate" name="completedDate"  class="editable dateField" value="{{completedDate}}"/>
+                <i class="icon-calendar"></i>
+              </div>
+            </div>
+          </div>
+          <div class="label">
+            Repeat:
+          </div>
+          <div class="r">
+            <div class="c c-1-3">
+              <div class="form-label">
+                Repeats:
+              </div>
+            </div>
+            <div class="c c-2-3">
+              <select id="task-repeat-frequency" title="Repeats Weekly">
+                <option value="0" title="Daily">Daily</option>
+                <option value="1" title="Every weekday (Monday to Friday)">Every weekday (Monday to Friday)</option>
+                <option value="2" title="Every Monday, Wednesday, and Friday">Every Monday, Wednesday, and Friday</option>
+                <option value="3" title="Every Tuesday and Thursday">Every Tuesday and Thursday</option>
+                <option value="4" title="Weekly">Weekly</option>
+                <option value="5" title="Monthly">Monthly</option>
+                <option value="6" title="Yearly">Yearly</option>
+              </select>
+            </div>
+          </div>
+          <div class="r">
+            <div class="c c-1-3">
+              <div class="form-label">
+                Repeats Every:
+              </div>
+            </div>
+            <div class="c c-2-3">
+              <select id="task-repeat-frequency" title="Repeats Weekly">
+                <option value="0" title="Daily">Daily</option>
+                <option value="1" title="Every weekday (Monday to Friday)">Every weekday (Monday to Friday)</option>
+                <option value="2" title="Every Monday, Wednesday, and Friday">Every Monday, Wednesday, and Friday</option>
+                <option value="3" title="Every Tuesday and Thursday">Every Tuesday and Thursday</option>
+                <option value="4" title="Weekly">Weekly</option>
+                <option value="5" title="Monthly">Monthly</option>
+                <option value="6" title="Yearly">Yearly</option>
+              </select>
+            </div>
+          </div>
+          <div class="r">
+            <div class="c c-1-3">
+              <div class="form-label">
+                Repeats On:
+              </div>
+            </div>
+            <div class="c c-2-3">
+              <input type="checkbox" class="editable" />M
+              <input type="checkbox"/>T
+              <input type="checkbox"/>W
+              <input type="checkbox"/>T
+              <input type="checkbox"/>F
+              <input type="checkbox"/>S
+              <input type="checkbox"/>S
+            </div>
+          </div>
+          <div class="r">
+            <div class="c c-1-3">
+              <div class="form-label">
+                Starts on:
+              </div>
+            </div>
+            <div class="c c-2-3">
+              <div class="input">
+                <input type="text" id="taskRepeatStartsOnDate" name="repeatStartsOnDate" class="editable dateField" value="{{repeatStartsOnDate}}"/>
+                <i class="icon-calendar"></i>
+              </div>
+            </div>
+          </div>
+          <div class="r">
+            <div class="c c-1-3">
+              <div class="form-label">
+                Ends:
+              </div>
+            </div>
+            <div class="c c-2-3">
+              <div class="input">
+                <input type="text" id="taskRepeatEndsOnDate" name="repeatEndsOnDate"  class="editable dateField" value="{{repeatEndsOnDate}}"/>
+                <i class="icon-calendar"></i>
+              </div>
+            </div>
+          </div>
+          <div class="r">
+            <div class="c c-1-3">
+              <div class="form-label">
+                Summary:
+              </div>
+            </div>
+            <div class="c c-2-3">
+              &nbsp;
+            </div>
+          </div>
+        </div> <!-- Task Dates -->
+        <div id="task-actions" class="action-placeholder" style="display: none">
+          <div class="label">
+            Actions:
+          </div>
+          <ul>
+            <li>
+              <div class="r">
+                <div class="c c-1-10">
+                  <i class="task-check icon-check-empty"></i>
+                </div>
+                <div class="c c-9-10">
+                  <input type="text" value="Action 01"/>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div><!-- Actions -->
+        <div id="task-references" class="action-placeholder" style="display: none">
+          references
+        </div><!-- References -->
+        <div id="task-repeat" class="action-placeholder" style="display: none">
+          <div class="r">
+            <div class="c c-1-2">
+              <div class="r">
+                <div class="c c-1-4">
+                  <div class="label">
+                    Priority:
+                  </div>
+                </div>
+                <div class="c c-3-4">
+                  <i class="icon-stop" style="color:red"></i>
+                  <i class="icon-stop" style="color:yellow"></i>
+                  <i class="icon-stop" style="color:blue"></i>
+                  <i class="icon-stop" style="color:green"></i>
+                </div>
+              </div>
+            </div>
+            <div class="c c-1-2">
+              <div class="r">
+                <div class="c c-1-3">
+                  <div class="label">
+                    Pomodoro's:
+                  </div>
+                </div>
+                <div class="c c-2-3">
+                  <i class="icon-apple" style="color:red"></i>
+                  <i class="icon-apple" style="color:red"></i>
+                  <i class="icon-apple" style="color:gray"></i>
+                  <i class="icon-apple" style="color:gray"></i>
+                  <i class="icon-apple" style="color:gray"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
